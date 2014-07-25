@@ -1,0 +1,29 @@
+{
+    "name": "tripnity/silex-memcache",
+    "description": "Memcache wrapper for Silex",
+    "keywords": ["silex", "memcache", "iconosquare"],
+    "homepage": "https://github.com/Tripnity/silex-memcache",
+    "type": "library",
+    "version": "dev",
+    "authors": [
+        {
+            "name": "Bill'O",
+            "email": "alexandre@statigr.am"
+        },
+        {
+            "name": "gcc",
+            "email": "gcc@statigr.am"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "require-dev": {
+        "silex/silex": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "SilexMemcache": "src"
+        }
+    }
+}
