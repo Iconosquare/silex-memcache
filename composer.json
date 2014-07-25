@@ -3,7 +3,7 @@
     "description": "Memcache wrapper for Silex",
     "keywords": ["silex", "memcache", "iconosquare"],
     "homepage": "https://github.com/Tripnity/silex-memcache",
-    "type": "library"
+    "type": "library",
     "authors": [
         {
             "name": "Bill'O",
