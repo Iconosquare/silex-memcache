@@ -4,7 +4,7 @@
     "keywords": ["silex", "memcache", "iconosquare"],
     "homepage": "https://github.com/Tripnity/silex-memcache",
     "type": "library",
-    "version": "dev",
+    "version": "master",
     "authors": [
         {
             "name": "Bill'O",
