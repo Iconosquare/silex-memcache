@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-0": {
-            "SilexMemcache": "src"
+            "Memcache\\Silex": "src"
         }
     }
 }
