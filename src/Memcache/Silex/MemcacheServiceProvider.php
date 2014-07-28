@@ -4,6 +4,7 @@ namespace Memcache\Silex;
 
 use Silex\Application;
 use Silex\ServiceProviderInterface;
+use Memcache\Silex\MemcacheWrapper;
 
 /**
  *   MemecacheServiceProvider
@@ -17,7 +18,7 @@ class MemcacheServiceProvider implements ServiceProviderInterface
     public function register(Application $app)
     {
         $app['memcache'] = $app->share(function () use ($app) {
-                return new \Memcache($app['memcache.servers']);
+                return new MemcacheWrapper($app['memcache.servers']);
             });
     }
 

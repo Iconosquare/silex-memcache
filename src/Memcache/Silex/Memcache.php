@@ -1,12 +1,14 @@
 <?php
 
+namespace Memcache\Silex;
+
 /**
- * Classe Memcache, Lazy => ne fait la connexion uniquement si utilisé.
+ * Classe MemcacheWrapper, Lazy => ne fait la connexion uniquement si utilisé.
  *
  * @package Statigram\Util
  * @author Jérôme Mahuet <gcc@statigr.am>
  */
-class Memcache
+class MemcacheWrapper
 {
     /**
      * @var array
@@ -45,7 +47,7 @@ class Memcache
             return;
         }
 
-        $this->memcache = new Memcached;
+        $this->memcache = new \Memcached;
         foreach ($this->servers as $server) {
             $this->memcache->addServer($server["host"], $server["port"]);
         }
