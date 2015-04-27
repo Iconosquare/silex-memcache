@@ -80,8 +80,12 @@ class MemcacheWrapper
         $result = $this->memcache->get($key);
 
         if ($result === false && $fallback instanceof \Closure) {
-            $result = $fallback();
-            $this->set($key, $result, $expiration);
+            try {
+                $result = $fallback();
+                $this->set($key, $result, $expiration);
+            } catch (\Exception $e) {
+                throw $e;
+            }
         }
         $this->close();
         return $result;
