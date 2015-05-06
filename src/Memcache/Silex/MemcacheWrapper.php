@@ -133,4 +133,14 @@ class MemcacheWrapper
         $this->memcache->flush();
         $this->close();
     }
+    
+    /**
+     * Incrémente une clé avec la valeur
+     */ 
+    public function increment($key, $inc = 1)
+    {
+        $this->connect();
+        $this->memcache->increment($key, $inc);
+        $this->close();
+    }
 }
