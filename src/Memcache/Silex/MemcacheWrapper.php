@@ -138,7 +138,7 @@ class MemcacheWrapper
      * Incrémente une clé avec la valeur
      * @param $key
      * @param $inc
-     */ 
+     */
     public function increment($key, $inc = 1)
     {
         $this->connect();
